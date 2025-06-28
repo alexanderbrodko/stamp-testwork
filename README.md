@@ -2,7 +2,7 @@
 
 - download and unpack [https://github.com/microsoft/onnxruntime/releases]
 - `mkdir build & cd build & cmake .. & make`
-- './YOLOv8Detector path/to/your.video'
+- `./YOLOv8Detector path/to/your.video`
 
 ![frame151](https://github.com/user-attachments/assets/efb8a4c4-4754-480d-9677-27fb72ef709d)
 ![frame527](https://github.com/user-attachments/assets/cbc9fd09-6362-4a13-9d7a-8b82a78444ce)
