@@ -1234,6 +1234,7 @@ bool ProcessFrame(Mat& frame, Ptr<BackgroundSubtractor>& bgSubtractor,
 			cls == "tow_truck" ||
 			cls == "trailer_truck" ||
 			cls == "recreational_vehicle" ||
+			cls == "passenger_car" ||
 			cls == "trolleybus";
 
 		auto color = Scalar(255,255,255);
@@ -1307,10 +1308,9 @@ int main(int argc, char* argv[]) {
 				(hasAnyVehicle ? Scalar(0, 0, 255) : Scalar(0, 255, 0)), 2);
 
 		Mat resizedFrame;
-		//resize(frame, resizedFrame, Size(800, 480));
-		//imshow("Detection", resizedFrame);
-		imshow("Detection", frame);
-
+		resize(frame, resizedFrame, Size(800, 480));
+		imshow("Detection", resizedFrame);
+		
 		if (waitKey(1) == 27) break;
 	}
 
